@@ -20,7 +20,8 @@ class UsersController < ApplicationController
     # DELETE /users/1
   # DELETE /users/1.xml
   def destroy
-    @user = User.find(params[:id])
+   @user = current_user
+    @user = User.find(params[:user])
     @user.destroy
 
     respond_to do |format|
