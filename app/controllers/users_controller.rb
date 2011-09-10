@@ -18,17 +18,18 @@ class UsersController < ApplicationController
   end
   
  
-   # DELETE /posts/1
-  # DELETE /posts/1.xml
-  def destroy
-    @user = current_user
+
+  
+   def destroy
+    @user = user.find(params[:id])
     @user.destroy
-    render 'logged_in'
+
+    respond_to do |format|
+      format.html { redirect_to(users_url) }
+      format.xml  { head :ok }
+    end
    end
-  
-  
-  
-  
+   
   
   
   
