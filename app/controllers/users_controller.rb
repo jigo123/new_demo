@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
   
    def destroy
-    @user = user.find(params[:id])
+    @user = current_user
     @user.destroy
 
     respond_to do |format|
