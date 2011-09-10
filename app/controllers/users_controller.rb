@@ -24,11 +24,7 @@ class UsersController < ApplicationController
     @user = current_user
     @user.destroy
 
-    respond_to do |format|
-      format.html { redirect_to(user_url) }
-      format.xml  { head :ok }
-    end
-  end
+   end
   
   
   
