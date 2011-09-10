@@ -17,18 +17,21 @@ class UsersController < ApplicationController
     end
   end
   
-    # DELETE /users/1
-  # DELETE /users/1.xml
+ 
+   # DELETE /posts/1
+  # DELETE /posts/1.xml
   def destroy
-   
-    @user = User.find(params[:user])
+    @user = current_user
     @user.destroy
 
     respond_to do |format|
-      format.html { render_with_scope :new }
+      format.html { redirect_to(user_url) }
       format.xml  { head :ok }
     end
   end
+  
+  
+  
   
   
   
