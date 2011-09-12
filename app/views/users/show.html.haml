@@ -75,4 +75,4 @@
 
 %p= link_to 'Edit profile', edit_user_path(@user)
 %p= link_to 'delete profile', edit_user_path(@user)
-%p= link_to "Cancel my account",edit_user_path(@user), :confirm => "Are you sure?", :method => :delete
+%p= link_to "Cancel my account",delete_user_path(@user), :confirm => "Are you sure?", :method => :delete

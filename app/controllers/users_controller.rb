@@ -25,8 +25,10 @@ class UsersController < ApplicationController
     @user.destroy
 
     respond_to do |format|
-      render 'success', :locals => {:message => 'Checkout successful', :details => "User: #{@user.email}"}
+      format.html { redirect_to(delete_url) }
+      format.xml  { head :ok }
     end
+   
    end
    
   
