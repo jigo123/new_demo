@@ -75,4 +75,4 @@
 
 %p= link_to 'Edit profile', edit_user_path(@user)
 %p= link_to 'delete profile', edit_user_path(@user)
-%p= "Sign in", new_session_path(resource_name):confirm => "Are you sure?", :method => :delete
+%p= "Sign in", new_session_path(@user):confirm => "Are you sure?", :method => :delete
